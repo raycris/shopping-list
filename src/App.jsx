@@ -33,7 +33,6 @@ function App() {
               placeholder="Add a new item"
               required
             />
-            {/* <button>Add</button> */}
             <button className="cta">
               <span>Add me</span>
               <svg viewBox="0 0 13 10" height="10px" width="15px">
