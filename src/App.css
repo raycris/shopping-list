@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #bebebe;
+}
+
+h1,
+.shopping-list {
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shopping-list {
+  width: 300px;
+  margin-top: 20px;
+  background: #e0e0e0;
+  box-shadow: -5px -5px 18px #5e5e5e, 5px 5px 18px #ffffff;
+  border-radius: 46px;
+}
+
+.delete {
+  color: black;
+  border: none;
+  font-size: 1rem;
+  background: transparent;
+  font-weight: bold;
+}
+
+.input-container {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+input {
+  margin: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  max-width: 190px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 9999px;
+  box-shadow: inset 2px 5px 10px rgb(150, 150, 150);
+}
+
+ul {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  flex-direction: column;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.cta {
+  position: relative;
+  margin: auto;
+  width: 152px;
+  cursor: pointer;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+@media (min-width: 768px) {
+  .shopping-list {
+    width: 500px;
+    height: 250px;
+  }
+
+  .input-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 300px 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .shopping-list {
+    width: 900px;
+  }
+}
