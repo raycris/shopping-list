@@ -20,6 +20,12 @@ function App() {
     form.reset();
   }
 
+  // const pru = document.querySelector("li")
+
+  // addEventListener("dblclick", (event) => {
+  //   console.log(event);
+  // });
+
   return (
     <div>
       <h1>Shopping List</h1>
@@ -53,8 +59,19 @@ function App() {
 }
 
 function Item({ item, onRemoveItem }) {
+  const [click, setClick] = useState(false);
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log(event.detail);
+    if (event.detail === 1) {
+      setClick(true);
+    }
+  };
+
+
+
   return (
-    <li>
+    <li onClick={handleClick} className={click ? "bucket-list_2" : "bucket-list"}>
       - {item}
       <button className="delete" onClick={() => onRemoveItem(item)}>
         x
