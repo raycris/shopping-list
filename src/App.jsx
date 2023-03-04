@@ -53,8 +53,20 @@ function App() {
 }
 
 function Item({ item, onRemoveItem }) {
+  const [click, setClick] = useState(false);
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    if (event.detail === 1) {
+      setClick(!click);
+    }
+  };
+
   return (
-    <li>
+    <li
+      onClick={handleClick}
+      className={`bucket ${click ? "bucket-list_2" : "bucket-list"}`}
+    >
       - {item}
       <button className="delete" onClick={() => onRemoveItem(item)}>
         x

@@ -69,13 +69,22 @@ ul {
   justify-content: center;
 }
 
-li {
+.bucket {
   width: 200px;
   color: #234567;
+  margin: 6px 0;
   display: flex;
   list-style: none;
   align-items: center;
   justify-content: space-between;
+}
+
+.bucket-list {
+  text-decoration: none;
+}
+
+.bucket-list_2 {
+  text-decoration: line-through;
 }
 
 .cta {
@@ -137,6 +146,11 @@ li {
   transform: scale(0.95);
 }
 
+.blue {
+  background-color: blue;
+  color: red;
+}
+
 @media (min-width: 768px) {
   .shopping-list {
     width: 500px;
@@ -148,7 +162,8 @@ li {
     grid-template-columns: 300px 100px;
   }
 
-  li,
+  .bucket-list,
+  .bucket-list_2,
   .delete {
     font-size: 1.2rem;
   }
@@ -159,7 +174,8 @@ li {
     width: 900px;
   }
 
-  li,
+  .bucket-list,
+  .bucket-list_2,
   .delete {
     font-size: 1.4rem;
   }
