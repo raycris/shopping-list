@@ -69,7 +69,7 @@ ul {
   justify-content: center;
 }
 
-.bucket-list {
+.bucket {
   width: 200px;
   color: #234567;
   margin: 6px 0;
@@ -78,16 +78,12 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
+.bucket-list {
+  text-decoration: none;
+}
 
-.bucket-list_2{
+.bucket-list_2 {
   text-decoration: line-through;
-  width: 200px;
-  color: #234567;
-  margin: 6px 0;
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .cta {
@@ -149,7 +145,7 @@ ul {
   transform: scale(0.95);
 }
 
-.blue{
+.blue {
   background-color: blue;
   color: red;
 }

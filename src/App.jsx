@@ -71,7 +71,7 @@ function Item({ item, onRemoveItem }) {
 
 
   return (
-    <li onClick={handleClick} className={click ? "bucket-list_2" : "bucket-list"}>
+    <li onClick={handleClick} className={`bucket ${click ? "bucket-list_2" : "bucket-list"}`}>
       - {item}
       <button className="delete" onClick={() => onRemoveItem(item)}>
         x
